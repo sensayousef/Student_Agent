@@ -37,6 +37,7 @@
 | `CLAUDE.md` | Auto-loaded session rules: session-start sequence, lookup rule, workflow, sprint-log rule, folder ownership, code rules, testing protocol, Read Aloud. |
 | `AGENTS.md` | Cross-tool instructions for any AI coding assistant (Codex, Cursor, Aider, etc.). Defers to `CLAUDE.md`; carries the Read Aloud rule. |
 | `INDEX.md` | This file. Master TOC. |
+| `README.md` | GitHub landing page: what the project is, how to run and test it, pointers into `docs/`. Replaced the teammates' Node-server README. |
 | `.env.example` | Documented template for every env var the app needs. No real values ever — copy to `.env` (gitignored). |
 | `package.json` | Node scripts for the web portal only: `npm run test:web`, `npm run build:demo`. No dependencies. |
 | `requirements.txt` | Python runtime deps (Google ADK). |

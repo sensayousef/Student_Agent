@@ -52,6 +52,11 @@
 - Why: the teammates had no GitHub access and built in parallel; merge without a second backend runtime, duplicated data or conflicting files
 - Status: 33 pytest and 7 node tests pass; the rebuilt offline HTML is identical to theirs; the agent imports and all tool schemas build. Verified by running pytest, npm run test:web, the campus.json sync check and a static-server fetch of the portal files. NOT verified: a live Gemini reply (still blocked by the spend cap) and a real browser pass of the portal. Dropped on purpose: server.ts (SQLite sessions, OpenAI rewrite) and the committed offline HTML (rebuild with npm run build:demo). The portal's own chat is still rule-based, not wired to the agent.
 
+### 2026-11-13 — Publish to GitHub
+- What changed: first commit of the merged project; merged origin/main (Mohammed's "Prepare Campus Compass hackathon demo", identical to the zip) with --allow-unrelated-histories so his commit stays in history; resolved .gitignore and package.json (kept ours), removed his root-level copies (dist/, server.ts, build-demo.mjs, compass.test.mjs, Campus-Compass-Demo.html) now living in src/web/, scripts/, tests/web/; replaced README.md; .gitignore gains .adk/ and .coverage; tests/test_tools.py passes check=False to subprocess.run (ruff)
+- Why: user asked to push everything to GitHub; remote main already had one commit
+- Status: ruff clean, 33 pytest (100% coverage of src/student_agent) and 7 node tests pass; no secrets, .env or ADK session DB committed. Pushed without force.
+
 ---
 
 > When done: move this file to `tasks/archive/sprint-01-init.md`, remove from `tasks/active.md`.

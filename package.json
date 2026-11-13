@@ -1,0 +1,10 @@
+{
+  "name": "student-agent-web",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test:web": "node --test \"tests/web/*.test.mjs\"",
+    "build:demo": "node scripts/build-demo.mjs"
+  }
+}

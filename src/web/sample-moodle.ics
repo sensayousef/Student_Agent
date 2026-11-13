@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Campus Compass//Sample Coursework//EN
+BEGIN:VTODO
+UID:sample-network-brief@campus-compass.demo
+DTSTAMP:20261122T020000Z
+SUMMARY:Network analysis brief
+CATEGORIES:Computer Networks
+DUE:20261202T155900Z
+END:VTODO
+BEGIN:VEVENT
+UID:sample-testing-review@campus-compass.demo
+DTSTAMP:20261122T020000Z
+SUMMARY:Testing strategy review
+CATEGORIES:Software Quality
+DTSTART;TZID=Asia/Kuala_Lumpur:20261204T170000
+END:VEVENT
+END:VCALENDAR

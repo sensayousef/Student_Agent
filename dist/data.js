@@ -1,0 +1,65 @@
+const kb = "https://apiit.atlassian.net/wiki/spaces";
+export const links = {
+  renewal: kb + "/VISA/pages/585990145/How%2Bto%2BApply%2BStudent%2BPass%2BVisa%2BRenewal",
+  visa: kb + "/VISA/pages/221087912/STUDENT%20VISA%20PASS",
+  immigration: kb + "/VISA/pages/221217877",
+  it: kb + "/ITSM/pages/669581410/On-Campus%2BWi-Fi%2BWireless",
+  help: kb + "/ITSM/pages/1337360387",
+  apspace: "https://apspace.apu.edu.my/",
+  moodle: "https://lms2.apiit.edu.my/",
+  moodleGuide: "https://docs.moodle.org/501/en/calendar/export",
+  emgs: "https://visa.educationmalaysia.gov.my/emgs/application/searchForm/",
+  facilities: "https://apu.edu.my/campus-facilities"
+};
+export const campus = { id: "apu", name: "Asia Pacific University", short: "APU", timezone: "Asia/Kuala_Lumpur", student: "Amina", clock: "2026-11-22T10:00", reviewed: "13 Nov 2026" };
+export const offices = [
+  {id:"immigration", name:"Immigration Services", category:"Student services", icon:"passport", tone:"lavender", location:"Level 4 · New Campus", hours:"Mon–Fri, 10:00 am–3:00 pm", contact:"visa@apu.edu.my", source:links.immigration, description:"Student Pass renewals, document queries and passport collection.", directions:"Go to Level 4 of the New Campus and look for the Immigration Services Counter. Use the official counter page to confirm hours before your visit."},
+  {id:"tech", name:"TechCentre", category:"Technology", icon:"laptop", tone:"blue", location:"Level 6 · Opposite Block D", hours:"See the Virtual Help Centre", source:links.it, description:"Walk-in support for campus Wi-Fi and student IT services.", directions:"Head to Level 6 and look for the TechCentre opposite Block D. For remote support, open the Virtual Help Centre."},
+  {id:"admin", name:"Academic Admin", category:"Academic", icon:"graduation", tone:"mint", location:"See APSpace directory", hours:"See APSpace directory", source:links.apspace, description:"Academic and administrative enquiries, student records and programme support.", directions:"Use the office directory in APSpace for the latest location, hours and contact details."},
+  {id:"bursary", name:"Bursary", category:"Finance", icon:"wallet", tone:"sand", location:"See APSpace directory", hours:"See APSpace directory", source:links.apspace, description:"Tuition fees, payment enquiries and student account support.", directions:"Open APSpace and use the directory to check current contact details for Bursary."},
+  {id:"library", name:"Campus Library", category:"Academic", icon:"book", tone:"blue", location:"APU New Campus", hours:"Confirm with the library", source:links.facilities, description:"Study spaces, library resources and academic support.", directions:"Consult the APU campus facilities guide for current library information."},
+  {id:"help", name:"Virtual Help Centre", category:"Student services", icon:"headset", tone:"lavender", location:"Online", hours:"See the support portal", source:links.help, description:"Get support online and find the team that can help with your enquiry.", directions:"Open the Virtual Help Centre and follow APU's instructions to contact support."}
+];
+export const topics = [
+  {id:"fees", keywords:["renewal fee","visa fee","pass fee","how much","renewal cost","visa cost","rm1240"], title:"Confirm your Student Pass renewal fee", answer:"APU publishes different fees based on renewal length and how far ahead you submit. Open the renewal planner for an estimate and confirm the amount with Immigration Services before paying.", sources:[["APU renewal instructions and fee table",links.renewal]], action:["Open renewal planner","pass"]},
+  {id:"where", keywords:["where is immigration","where do i renew","visa office","immigration counter","immigration office","level 4","where is the student pass office"], title:"Find Immigration Services", answer:"The Immigration Services Counter is on Level 4 of the New Campus. Its published counter hours are 10:00 am to 3:00 pm on weekdays, excluding public holidays. Passport submission has a separate schedule.", sources:[["Immigration contact and location",links.immigration]], action:["View office details","directory/immigration"]},
+  {id:"renewal", keywords:["renew","student pass","visa","passport","receipt","immigration","18 months","checklist"], title:"Plan your Student Pass renewal", answer:"Start about three months before your pass expires. APU asks for at least 18 months of passport validity. Use the planner to check the documents, see the published fee tier and open the official submission instructions.", sources:[["APU online renewal instructions",links.renewal],["APU general Student Pass guidance",links.visa]], action:["Open renewal planner","pass"]},
+  {id:"tech", keywords:["wifi","wi fi","wireless","password","techcentre","tech centre","it help","it support","internet","login"], title:"Get campus IT support", answer:"For walk-in IT help, go to the TechCentre on Level 6, opposite Block D. For Wi-Fi setup, open APU’s on-campus wireless guide. The Virtual Help Centre provides an online support route.", sources:[["APU campus Wi-Fi guide",links.it],["Virtual Help Centre",links.help]], action:["View TechCentre","directory/tech"]},
+  {id:"coursework", keywords:["assignment","moodle","coursework","deadline","due","reminder","submission"], title:"See coursework and reminders", answer:"Use Coursework to see sample Moodle deadlines or import a calendar file. Compass shows in-app reminders 7, 3 and 1 day before the deadline in Malaysia time. Mark a task complete once you have submitted it in Moodle.", sources:[["Open APU Moodle",links.moodle]], action:["Open coursework","coursework"]},
+  {id:"events", keywords:["event","events","happening","cultural","workshop","register","calendar","hackathon"], title:"See what’s happening on campus", answer:"Open Events for the current demo listings. You can filter for events on now or coming up, check the organizer and venue, register in the demo, or add an event to your calendar.", sources:[["APSpace campus updates",links.apspace]], action:["Browse events","events"]},
+  {id:"bursary", keywords:["bursary","tuition","invoice","financial","fees","payments","pay my"], title:"Contact the Bursary", answer:"The Bursary handles tuition fees, payments and account enquiries. Use the APSpace office directory for its current contact, location and opening hours.", sources:[["APSpace office directory",links.apspace]], action:["View Bursary","directory/bursary"]},
+  {id:"admin", keywords:["admin","academic office","academic","transcript","programme","enrolment"], title:"Find Academic Admin", answer:"Academic Admin is the starting point for student records and programme administration. Check the APSpace directory for current office details.", sources:[["APSpace office directory",links.apspace]], action:["View Academic Admin","directory/admin"]},
+  {id:"library", keywords:["library","books","study space"], title:"Find the campus library", answer:"APU lists its campus library and study facilities in the official campus facilities guide.", sources:[["APU campus facilities",links.facilities]], action:["View Campus Library","directory/library"]},
+  {id:"track", keywords:["emgs","track student pass","official progress","visa status","track visa"], title:"Check your official Student Pass progress", answer:"Use Track Student Pass in APSpace or open EMGS to check your application. The Compass inbox shows the next action from a selected sample email.", sources:[["APSpace",links.apspace],["EMGS application tracker",links.emgs]], action:["Open Student Pass","pass"]},
+  {id:"directions", keywords:["where","office","location","direction","support","help","map","hours"], title:"Find the right campus service", answer:"Search the directory by office or the type of help you need. Office cards link to APU sources for current hours, location and contact details.", sources:[["APSpace office directory",links.apspace]], action:["Browse campus directory","directory"]}
+];
+export const checklist = [
+  ["validity","Check passport validity","Confirm at least 18 months of validity."],
+  ["passport","Prepare passport scans","Include your details page, current pass and most recent Malaysian entry stamp. Check the source for any additional pages."],
+  ["extras","Check photo and additional documents","Confirm any extra requirements with Immigration Services."],
+  ["fee","Confirm the applicable fee","Check APU’s official fee table before paying."],
+  ["receipt","Prepare the payment receipt","Keep the transaction receipt with your renewal documents."],
+  ["submit","Submit from your APU email","Follow the university’s instructions to send the required documents and receipt."]
+];
+export const samples = [
+  {id:"receipt", sender:"APU Immigration (demo)", email:"visa@apu.edu.my", at:"2026-11-21T14:24", subject:"Student Pass renewal · Payment receipt requested", body:"Hello Amina, we have received your renewal documents. Please reply from your APU student email with a copy of your payment receipt so we can continue reviewing your application. Thank you, Immigration Services."},
+  {id:"passport", sender:"APU Immigration (demo)", email:"visa@apu.edu.my", at:"2026-11-20T11:00", subject:"Student Pass renewal · Passport scans requested", body:"Hello Amina, please reply with clear passport scans, including your identification page and current Student Pass. Thank you, Immigration Services."},
+  {id:"received", sender:"APU Immigration (demo)", email:"visa@apu.edu.my", at:"2026-11-19T09:30", subject:"Student Pass renewal · Documents received", body:"Hello Amina, we have received your documents. No action is needed at the moment. You can follow your official application progress in APSpace."},
+  {id:"unclear", sender:"APU Immigration (demo)", email:"visa@apu.edu.my", at:"2026-11-18T10:15", subject:"Student Pass renewal · Follow-up", body:"Hello Amina, please check the previous correspondence about your renewal and contact the Immigration Services Counter if you need help."}
+];
+export const events = [
+  {id:"icn",title:"International Cultural Night", category:"Culture",theme:"violet",icon:"sparkles",start:"2026-11-22T09:00",end:"2026-11-22T12:00",venue:"APU Main Atrium",organizer:"Student Representative Council",description:"Student societies share performances, food and cultural showcases across the atrium. The demo listing is inspired by past APU cultural events."},
+  {id:"workshop",title:"Build Your First API",category:"Workshop",theme:"cyan",icon:"code",start:"2026-11-24T14:00",end:"2026-11-24T16:00",venue:"Block D · Computing Lab",organizer:"APU Developer Club",description:"A hands-on introduction to routing, validation and testing. Bring a laptop to follow along with the workshop."},
+  {id:"african",title:"African Night",category:"Culture",theme:"peach",icon:"music",start:"2026-11-27T18:00",end:"2026-11-27T21:00",venue:"APU Auditorium",organizer:"African Student Society",description:"An evening of dance, music and stories from APU’s student community."},
+  {id:"career",title:"Tech Careers Coffee Chat",category:"Careers",theme:"green",icon:"briefcase",start:"2026-11-28T10:00",end:"2026-11-28T11:30",venue:"APU Student Lounge",organizer:"Career Centre",description:"Ask alumni about portfolios, junior engineering roles and their first year in industry."},
+  {id:"sudan",title:"Sudan Night",category:"Culture",theme:"violet",icon:"music",start:"2026-12-01T18:30",end:"2026-12-01T21:30",venue:"APU Auditorium",organizer:"Sudanese Student Community",description:"A community-led cultural showcase with music, food and storytelling."}
+];
+export const assignments = [
+  {id:"secure",title:"Secure Coding lab report",course:"Information Security",due:"2026-11-30T23:59",complete:false,source:"Moodle"},
+  {id:"data",title:"Database design exercise",course:"Database Systems",due:"2026-12-03T17:00",complete:false,source:"Moodle"},
+  {id:"prototype",title:"UX prototype reflection",course:"Software Engineering",due:"2026-12-06T20:00",complete:false,source:"Moodle"}
+];
+export const seed = () => ({
+  clock:campus.clock, pass:{expiry:"2027-02-22",duration:12,checked:["validity","passport"],mail:"receipt"},
+  tasks:assignments.map(item=>({...item})), registered:[], saved:[], alerts:[], read:[], chat:[]
+});
